@@ -153,14 +153,12 @@ export default function About() {
           
           <div className="flex items-center justify-between gap-4 w-full relative z-10">
             {/* Right: Icon + Title */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] shrink-0 animate-bounce" style={{ animationDuration: '3s' }}>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0V9.75m-5.007 0V9.75m5.007 0a3 3 0 01-3-3m-2.007 3a3 3 0 003-3m0 0V2.25h-3M12 7.5h3.75M12 12h-.375a3 3 0 00-3 3v.75h9v-.75a3 3 0 00-3-3H12z" />
-                </svg>
-              </div>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl md:text-3xl shrink-0 animate-bounce" style={{ animationDuration: '3s' }}>
+                🏆
+              </span>
               <h3 className="text-lg md:text-xl font-black text-white text-glow-gold">
-                מי יהיו זוכי האתגר הגדול? 🏆
+                מי יהיו זוכי האתגר הגדול?
               </h3>
             </div>
             
