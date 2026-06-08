@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
+    <section id="about" className="pt-20 pb-0 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[250px] h-[250px] bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -18,7 +18,7 @@ export default function About() {
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-0">
           
           <div className="glass-card p-8 rounded-2xl text-right">
             <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6 mr-0 ml-auto">

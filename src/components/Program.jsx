@@ -252,7 +252,7 @@ export default function Program() {
   };
 
   return (
-    <section id="program" className="py-24 relative overflow-hidden bg-[#0A192F]">
+    <section id="program" className="pt-12 pb-24 relative overflow-hidden bg-[#0A192F]">
       {/* Background elements */}
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-cyan-950/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-amber-950/10 rounded-full blur-3xl pointer-events-none" />
