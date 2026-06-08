@@ -13,7 +13,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">אודות הכנס</h2>
           <div className="w-24 h-1 bg-gradient-to-l from-cyan-500 to-[#D4AF37] mx-auto rounded-full mb-6"></div>
           <p className="text-slate-300 text-lg leading-relaxed">
-            לאחר ההצלחה הפנומנלית של כנס נובמבר האחרון, כנס ירושלים השנתי לסוכרת והשמנה חוזר – גדול יותר, ממוקד יותר ומחובר יותר לשטח. גם השנה נמשיך להדק את הרצף הטיפולי והקשר המקצועי בין צוותי בתי החולים והקהילה. לצד הרצאות קליניות מעמיקות בחזית המדע, נחזיר אל הבמה את חוויית הלמידה הייחודית של הכנס: אתגר אינטראקטיבי חדשני ודינמי להטמעת הידע והכלים המובילים בעשייה היומיומית.
+            כנס ירושלים השנתי לסוכרת והשמנה חוזר – גדול, ממוקד ומחובר יותר לשטח. השנה נמשיך להדק את הרצף הטיפולי והקשר המקצועי בין בתי החולים לקהילה. לצד הרצאות קליניות בחזית המדע, נחזיר לבמה את חוויית הלמידה הייחודית: אתגר אינטראקטיבי חדשני ודינמי להטמעת כלים מעשיים בעשייה היומיומית.
           </p>
         </div>
 
@@ -58,6 +58,29 @@ export default function About() {
 
         </div>
 
+        {/* Festive Challenge Section */}
+        <div className="mt-16 bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-[#D4AF37]/20 rounded-3xl p-6 md:p-8 text-right relative overflow-hidden group hover:border-[#D4AF37]/40 transition-all duration-300">
+          {/* Decorative glowing background orb */}
+          <div className="absolute -left-20 -top-20 w-48 h-48 bg-[#D4AF37]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500" />
+          
+          <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
+            {/* Festive Icon (Trophy with particle glow) */}
+            <div className="w-14 h-14 rounded-2xl bg-[#D4AF37]/15 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] shrink-0 animate-bounce" style={{ animationDuration: '3s' }}>
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0V9.75m-5.007 0V9.75m5.007 0a3 3 0 01-3-3m-2.007 3a3 3 0 003-3m0 0V2.25h-3M12 7.5h3.75M12 12h-.375a3 3 0 00-3 3v.75h9v-.75a3 3 0 00-3-3H12z" />
+              </svg>
+            </div>
+
+            <div className="space-y-2 flex-grow">
+              <h3 className="text-xl md:text-2xl font-black text-white text-glow-gold flex items-center gap-2">
+                מי יהיו זוכי האתגר הגדול? 🏆
+              </h3>
+              <p className="text-slate-300 text-sm md:text-base leading-relaxed">
+                השנה אנו לוקחים את הלמידה צעד אחד קדימה! לאורך כל הכנס נקיים אתגרים דיגיטליים אינטראקטיביים שיבחנו את הידע שלכם בזמן אמת. האם אלו יהיו צוותי בתי החולים או הקהילה? מי יפגין את המענה המהיר והמדויק ביותר? הכינו את הסמארטפונים – הזוכים יוכרזו בסיכום הכנס החגיגי ויזכו בפרסים יקרי ערך!
+              </p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
