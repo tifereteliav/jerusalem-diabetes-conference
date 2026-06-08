@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0A192F;
+    color: #F8FAFC;
+    font-family: 'Heebo', 'Rubik', sans-serif;
+  }
+}
+
+/* Custom styles for luxury glassmorphism & clinical tech visuals */
+
+.glass-panel {
+  background: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 210, 255, 0.25);
+  box-shadow: 0 10px 25px -5px rgba(0, 210, 255, 0.1), 0 8px 10px -6px rgba(0, 210, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Glowing text & circles */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.bg-glow-cyan {
+  box-shadow: 0 0 40px rgba(0, 210, 255, 0.15);
+}
+
+.bg-glow-gold {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+}
+
+/* Clinical Wave Animations */
+@keyframes waveFlow {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes waveFlowCounter {
+  0% {
+    transform: rotate(360deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.95);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.05);
+  }
+}
+
+.animate-wave-flow {
+  animation: waveFlow 25s linear infinite;
+}
+
+.animate-wave-flow-reverse {
+  animation: waveFlowCounter 30s linear infinite;
+}
+
+/* Pulse animation for medical nodes */
+@keyframes nodePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.95;
+  }
+}
+
+.animate-node-pulse {
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A192F;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 210, 255, 0.3);
+}
+
+/* RTL Adjustments */
+html {
+  scroll-behavior: smooth;
+}
