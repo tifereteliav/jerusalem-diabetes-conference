@@ -22,7 +22,7 @@ export default function Hero() {
     {
       name: 'דבורה שפירא',
       title: 'אחות מומחית קלינית בסוכרת, המרכז הרפואי שערי צדק',
-      image: ''
+      image: '/דבורה שפירא.jpeg'
     },
     {
       name: 'מיטל לויטן אליהו',
