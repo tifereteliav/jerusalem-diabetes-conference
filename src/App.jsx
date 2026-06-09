@@ -29,45 +29,45 @@ function App() {
       />
 
       {/* Header Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#0A192F]/80 backdrop-blur-md border-b border-white/5">
-        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-40 bg-[#030712]/85 backdrop-blur-lg border-b border-white/5 h-24 flex items-center">
+        <div className="container mx-auto px-6 flex items-center justify-between w-full">
           
           {/* Logo / Title */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             <div className="text-right">
-              <span className="font-extrabold text-white block text-base md:text-lg tracking-wide">
+              <span className="font-bold text-white block text-sm sm:text-base md:text-lg tracking-wider hover:text-[#D4AF37] transition-colors duration-300">
                 כנס סוכרת ירושלים 2026
               </span>
             </div>
           </div>
 
           {/* Navigation Links (Hebrew RTL) */}
-          <nav className="flex items-center gap-6 md:gap-8">
+          <nav className="flex items-center gap-6 md:gap-10">
             <a 
               href="#about" 
-              className="text-sm font-semibold text-slate-300 hover:text-white hover:text-glow-cyan transition-colors"
+              className="text-sm font-semibold text-slate-300 hover:text-white hover:text-glow-cyan transition-colors duration-300"
             >
               אודות הכנס
             </a>
             <a 
               href="#program" 
-              className="text-sm font-semibold text-slate-300 hover:text-white hover:text-glow-cyan transition-colors"
+              className="text-sm font-semibold text-slate-300 hover:text-white hover:text-glow-cyan transition-colors duration-300"
             >
               תוכנית הכנס
             </a>
 
             {/* Previous Conferences Dropdown */}
             <div className="relative group">
-              <button className="text-sm font-semibold text-slate-300 hover:text-white hover:text-glow-cyan transition-colors flex items-center gap-1 cursor-pointer">
-                כנסים קודמים
-                <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <button className="text-sm font-semibold text-slate-300 hover:text-white hover:text-glow-cyan flex items-center gap-1.5 align-middle transition-colors duration-300 cursor-pointer">
+                <span>כנסים קודמים</span>
+                <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-slate-400 group-hover:text-cyan-400 self-center" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute right-0 mt-2 w-32 rounded-xl bg-[#0A192F]/95 backdrop-blur-md border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute right-0 mt-3 w-36 rounded-xl bg-[#030712]/95 backdrop-blur-md border border-[#D4AF37]/35 shadow-[0_10px_30px_rgba(0,0,0,0.5)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-1.5">
                 <button 
                   onClick={() => setShowVideoModal(true)}
-                  className="w-full text-right px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-[#D4AF37] hover:bg-white/5 rounded-xl transition-colors cursor-pointer"
+                  className="w-full text-right px-3 py-2 text-xs font-bold text-slate-300 hover:text-[#D4AF37] hover:bg-white/5 rounded-lg transition-colors cursor-pointer"
                 >
                   שנת 2025
                 </button>
@@ -78,7 +78,7 @@ function App() {
               href="https://reg.eventact.com/form?Event=iy5YAAA&c=i9wg&Form=iFJ4AAA&=&Account=iAA&hc=&login=455291486150" 
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 rounded-xl text-sm font-bold bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/30 hover:border-[#D4AF37] text-[#D4AF37] hover:text-white transition-all shadow-[0_0_15px_rgba(212,175,55,0.05)]"
+              className="px-6 py-2.5 rounded-xl text-sm font-bold bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/30 hover:border-[#D4AF37] text-[#D4AF37] hover:text-white transition-all shadow-[0_0_15px_rgba(212,175,55,0.08)] duration-300"
             >
               הרשמה
             </a>

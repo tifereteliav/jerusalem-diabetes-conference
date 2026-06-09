@@ -37,8 +37,8 @@ export default function About() {
           {/* Research & Clinic Card */}
           <div 
             onClick={() => toggleExpand('research')}
-            className={`glass-card p-6 rounded-2xl text-right cursor-pointer border transition-all duration-300 ${
-              expanded.research ? 'border-cyan-500/40 bg-white/[0.06] shadow-[0_10px_20px_rgba(0,210,255,0.05)]' : 'border-white/5'
+            className={`glass-card-cyan p-6 rounded-2xl text-right cursor-pointer transition-all duration-300 ${
+              expanded.research ? 'bg-white/[0.06] shadow-[0_15px_30px_rgba(0,210,255,0.15)] border-cyan-400' : ''
             }`}
           >
             <div className="flex items-center justify-between gap-4 w-full">
@@ -51,8 +51,8 @@ export default function About() {
                 <h3 className="text-lg font-bold text-white">מחקר וקליניקה</h3>
               </div>
               <button 
-                className={`w-7 h-7 rounded-full bg-slate-900 border border-white/5 flex items-center justify-center text-slate-300 transition-transform duration-300 ${
-                  expanded.research ? 'rotate-180 text-cyan-400 border-cyan-500/20' : 'hover:text-white'
+                className={`w-7 h-7 rounded-full bg-slate-900 border flex items-center justify-center text-slate-305 transition-all duration-300 ${
+                  expanded.research ? 'rotate-180 border-cyan-500/40 text-cyan-400' : 'border-cyan-500/20 hover:text-white'
                 }`}
                 aria-label="הצג פרטים"
               >
@@ -62,8 +62,8 @@ export default function About() {
               </button>
             </div>
             
-            <div className={`overflow-hidden transition-all duration-300 ${expanded.research ? 'max-h-40 opacity-100 mt-4 border-t border-white/5 pt-4' : 'max-h-0 opacity-0'}`}>
-              <p className="text-slate-300 leading-relaxed text-sm">
+            <div className={`overflow-hidden transition-all duration-300 ${expanded.research ? 'max-h-40 opacity-100 mt-4 border-t border-cyan-500/10 pt-4' : 'max-h-0 opacity-0'}`}>
+              <p className="text-slate-355 leading-relaxed text-sm">
                 העמקה בקווי המנחה הטיפוליים העדכניים ביותר, כולל מחקרים אחרונים על שילוב של טיפולי GLP1 R agonists ושימור מסת שריר בקרב מטופלים.
               </p>
             </div>
@@ -72,8 +72,8 @@ export default function About() {
           {/* Innovation Card */}
           <div 
             onClick={() => toggleExpand('innovation')}
-            className={`glass-card p-6 rounded-2xl text-right cursor-pointer border transition-all duration-300 ${
-              expanded.innovation ? 'border-teal-500/40 bg-white/[0.06] shadow-[0_10px_20px_rgba(20,184,166,0.05)]' : 'border-white/5'
+            className={`glass-card-teal p-6 rounded-2xl text-right cursor-pointer transition-all duration-300 ${
+              expanded.innovation ? 'bg-white/[0.06] shadow-[0_15px_30px_rgba(20,184,166,0.15)] border-teal-400' : ''
             }`}
           >
             <div className="flex items-center justify-between gap-4 w-full">
@@ -86,8 +86,8 @@ export default function About() {
                 <h3 className="text-lg font-bold text-white">חדשנות טכנולוגית</h3>
               </div>
               <button 
-                className={`w-7 h-7 rounded-full bg-slate-900 border border-white/5 flex items-center justify-center text-slate-300 transition-transform duration-300 ${
-                  expanded.innovation ? 'rotate-180 text-teal-400 border-teal-500/20' : 'hover:text-white'
+                className={`w-7 h-7 rounded-full bg-slate-900 border flex items-center justify-center text-slate-305 transition-all duration-300 ${
+                  expanded.innovation ? 'rotate-180 border-teal-500/40 text-teal-400' : 'border-teal-500/20 hover:text-white'
                 }`}
                 aria-label="הצג פרטים"
               >
@@ -97,8 +97,8 @@ export default function About() {
               </button>
             </div>
             
-            <div className={`overflow-hidden transition-all duration-300 ${expanded.innovation ? 'max-h-40 opacity-100 mt-4 border-t border-white/5 pt-4' : 'max-h-0 opacity-0'}`}>
-              <p className="text-slate-300 leading-relaxed text-sm">
+            <div className={`overflow-hidden transition-all duration-300 ${expanded.innovation ? 'max-h-40 opacity-100 mt-4 border-t border-teal-500/10 pt-4' : 'max-h-0 opacity-0'}`}>
+              <p className="text-slate-355 leading-relaxed text-sm">
                 הדגמה וניתוח של מערכות ניטור סוכר מתקדמות (AID), עטי הזרקה חכמים ושימוש בכלים מבוססי נתונים לשיפור האיזון המטבולי.
               </p>
             </div>
@@ -107,8 +107,8 @@ export default function About() {
           {/* Learning Card */}
           <div 
             onClick={() => toggleExpand('learning')}
-            className={`glass-card p-6 rounded-2xl text-right cursor-pointer border transition-all duration-300 ${
-              expanded.learning ? 'border-[#D4AF37]/40 bg-white/[0.06] shadow-[0_10px_20px_rgba(212,175,55,0.05)]' : 'border-white/5'
+            className={`glass-card-gold p-6 rounded-2xl text-right cursor-pointer transition-all duration-300 ${
+              expanded.learning ? 'bg-white/[0.06] shadow-[0_15px_30px_rgba(212,175,55,0.15)] border-[#D4AF37]' : ''
             }`}
           >
             <div className="flex items-center justify-between gap-4 w-full">
@@ -121,8 +121,8 @@ export default function About() {
                 <h3 className="text-lg font-bold text-white">למידה חווייתית</h3>
               </div>
               <button 
-                className={`w-7 h-7 rounded-full bg-slate-900 border border-white/5 flex items-center justify-center text-slate-300 transition-transform duration-300 ${
-                  expanded.learning ? 'rotate-180 text-[#D4AF37] border-[#D4AF37]/20' : 'hover:text-white'
+                className={`w-7 h-7 rounded-full bg-slate-900 border flex items-center justify-center text-slate-305 transition-all duration-300 ${
+                  expanded.learning ? 'rotate-180 border-[#D4AF37]/40 text-[#D4AF37]' : 'border-[#D4AF37]/20 hover:text-white'
                 }`}
                 aria-label="הצג פרטים"
               >
@@ -132,8 +132,8 @@ export default function About() {
               </button>
             </div>
             
-            <div className={`overflow-hidden transition-all duration-300 ${expanded.learning ? 'max-h-40 opacity-100 mt-4 border-t border-white/5 pt-4' : 'max-h-0 opacity-0'}`}>
-              <p className="text-slate-300 leading-relaxed text-sm">
+            <div className={`overflow-hidden transition-all duration-300 ${expanded.learning ? 'max-h-40 opacity-100 mt-4 border-t border-[#D4AF37]/10 pt-4' : 'max-h-0 opacity-0'}`}>
+              <p className="text-slate-355 leading-relaxed text-sm">
                 שילוב של אתגרים דיגיטליים ומשחקים אינטראקטיביים לאורך כל היום, המאפשרים לצוותים לבחון את הידע הקליני שלהם בצורה דינמית ומעוררת עניין.
               </p>
             </div>

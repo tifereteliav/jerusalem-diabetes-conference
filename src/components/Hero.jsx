@@ -162,10 +162,10 @@ export default function Hero() {
             </div>
 
             {/* Co-Chairs Section */}
-            <div className="border-t border-white/10 pt-6 mt-8">
+            <div className="mt-20 pt-10 border-t border-white/5">
               <span className="text-xs uppercase tracking-wider text-[#D4AF37] font-bold block mb-4">יושבות ראש הכנס:</span>
               <div className="flex flex-wrap gap-6 justify-start">
-                <div className="flex items-center gap-3 bg-white/[0.02] border border-white/5 p-3 rounded-xl backdrop-blur-sm">
+                <div className="flex items-center gap-3 glass-card-cyan px-4 py-3.5 rounded-2xl">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-teal-500 flex items-center justify-center text-[#0A192F] font-bold text-sm shadow shrink-0">
                     תה
                   </div>
@@ -176,7 +176,7 @@ export default function Hero() {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 bg-white/[0.02] border border-white/5 p-3 rounded-xl backdrop-blur-sm">
+                <div className="flex items-center gap-3 glass-card-gold px-4 py-3.5 rounded-2xl">
                   <div className="w-10 h-10 rounded-full overflow-hidden border border-[#D4AF37]/50 shadow shrink-0 bg-slate-900">
                     <img src="/tiferet.jpg" alt="תפארת אליאב" className="w-full h-full object-cover" />
                   </div>
@@ -227,10 +227,10 @@ export default function Hero() {
                 {speakers.map((speaker, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-[180px] sm:w-[200px] snap-start bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-cyan-400 hover:bg-cyan-500/[0.05] p-4 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_10px_25px_rgba(0,210,255,0.15)] group/sp"
+                    className="flex-shrink-0 w-[210px] sm:w-[240px] snap-start glass-card-cyan p-5 rounded-2xl group/sp"
                   >
                     {/* Avatar */}
-                    <div className="w-16 h-16 mx-auto mb-3.5 rounded-full overflow-hidden border border-cyan-500/20 group-hover/sp:border-cyan-400 group-hover/sp:scale-105 transition-all duration-500 shadow-md bg-slate-900 flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border border-cyan-500/20 group-hover/sp:border-cyan-400 group-hover/sp:scale-105 transition-all duration-500 shadow-md bg-slate-900 flex items-center justify-center">
                       {speaker.image ? (
                         <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
                       ) : (
@@ -243,11 +243,11 @@ export default function Hero() {
                     </div>
                     
                     {/* Name & Title */}
-                    <div className="text-center">
-                      <h5 className="font-bold text-white text-xs sm:text-sm mb-1 group-hover/sp:text-cyan-300 transition-colors duration-300">
+                    <div className="text-center flex flex-col justify-start h-[100px]">
+                      <h5 className="font-extrabold text-white text-sm sm:text-base mb-1.5 group-hover/sp:text-cyan-300 transition-colors duration-300">
                         {speaker.name}
                       </h5>
-                      <p className="text-[10px] text-slate-400 leading-normal line-clamp-2 group-hover/sp:text-slate-300 transition-colors duration-300">
+                      <p className="text-[11px] text-slate-350 leading-relaxed line-clamp-4 group-hover/sp:text-slate-250 transition-colors duration-300">
                         {speaker.title}
                       </p>
                     </div>
