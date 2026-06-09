@@ -166,8 +166,8 @@ export default function Hero() {
               <span className="text-xs uppercase tracking-wider text-[#D4AF37] font-bold block mb-4">יושבות ראש הכנס:</span>
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-start">
                 <div className="w-full sm:w-auto flex items-center gap-3 glass-card-cyan px-4 py-3 sm:py-3.5 rounded-2xl">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-teal-500 flex items-center justify-center text-[#0A192F] font-bold text-sm shadow shrink-0">
-                    תה
+                  <div className="w-10 h-10 rounded-full overflow-hidden border border-cyan-500/50 shadow shrink-0 bg-slate-900">
+                    <img src="/תהילה הראל.jpeg" alt="תהילה הראל" className="w-full h-full object-cover" />
                   </div>
                   <div className="text-right">
                     <span className="font-bold text-white block text-sm leading-none mb-1">תהילה הראל</span>
