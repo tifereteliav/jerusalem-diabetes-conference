@@ -32,7 +32,7 @@ export default function Hero() {
     {
       name: 'ליה תמיר',
       title: 'אחות רכזת תחום פצעים, קופ"ח כללית',
-      image: ''
+      image: '/ליה תמיר.jpeg'
     },
     {
       name: 'Prof. Avivit Cohen',
