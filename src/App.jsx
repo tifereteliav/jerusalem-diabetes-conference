@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [showVideoModal, setShowVideoModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +55,25 @@ function App() {
             >
               תוכנית הכנס
             </a>
+
+            {/* Previous Conferences Dropdown */}
+            <div className="relative group">
+              <button className="text-sm font-semibold text-slate-300 hover:text-white hover:text-glow-cyan transition-colors flex items-center gap-1 cursor-pointer">
+                כנסים קודמים
+                <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute right-0 mt-2 w-32 rounded-xl bg-[#0A192F]/95 backdrop-blur-md border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <button 
+                  onClick={() => setShowVideoModal(true)}
+                  className="w-full text-right px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-[#D4AF37] hover:bg-white/5 rounded-xl transition-colors cursor-pointer"
+                >
+                  שנת 2025
+                </button>
+              </div>
+            </div>
+
             <a 
               href="https://reg.eventact.com/form?Event=iy5YAAA&c=i9wg&Form=iFJ4AAA&=&Account=iAA&hc=&login=455291486150" 
               target="_blank"
@@ -76,6 +96,41 @@ function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Video Modal for 2025 Summary */}
+      {showVideoModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300">
+          <div className="relative w-full max-w-4xl bg-[#0A192F]/95 backdrop-blur-md border border-[#D4AF37]/30 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.25)]">
+            
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0A192F]/90">
+              <h3 className="text-lg font-bold text-white text-glow-gold">
+                כנס סוכרת ירושלים 2025 — סרטון סיכום
+              </h3>
+              <button 
+                onClick={() => setShowVideoModal(false)}
+                className="w-8 h-8 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-white/20 transition-all cursor-pointer"
+                aria-label="סגור"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Video Player Container */}
+            <div className="aspect-video bg-black flex items-center justify-center">
+              <video 
+                src="/סרטון סיכום כנס2025.mp4" 
+                controls 
+                autoPlay 
+                className="w-full h-full object-contain"
+              />
+            </div>
+            
+          </div>
+        </div>
+      )}
     </div>
   );
 }

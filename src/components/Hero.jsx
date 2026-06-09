@@ -146,18 +146,18 @@ export default function Hero() {
             {/* Call to Actions */}
             <div className="flex flex-wrap gap-4 justify-start mb-8">
               <a
-                href="#program"
-                className="px-8 py-4 rounded-xl font-bold bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-[#0A192F] shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/30 transition-all duration-300 transform hover:-translate-y-0.5"
-              >
-                לתוכנית הכנס
-              </a>
-              <a
                 href="https://reg.eventact.com/form?Event=iy5YAAA&c=i9wg&Form=iFJ4AAA&=&Account=iAA&hc=&login=455291486150"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 rounded-xl font-bold glass-card text-[#D4AF37] hover:text-white hover:bg-[#D4AF37]/10 transition-all duration-300 border border-[#D4AF37]/30 hover:border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.05)]"
+                className="px-8 py-4 rounded-xl font-bold bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-[#0A192F] shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/35 hover:scale-105 active:scale-95 transition-all duration-300 text-glow-gold relative overflow-hidden"
               >
                 להרשמה לכנס
+              </a>
+              <a
+                href="#program"
+                className="px-8 py-4 rounded-xl font-bold bg-white/5 border border-white/10 hover:border-cyan-500/30 text-slate-300 hover:text-white hover:bg-cyan-500/5 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+              >
+                לתוכנית הכנס
               </a>
             </div>
 
@@ -196,22 +196,22 @@ export default function Hero() {
                 <span className="text-xs uppercase tracking-wider text-cyan-300 font-bold block">מרצי הכנס:</span>
                 
                 {/* Scroll Buttons */}
-                <div className="flex gap-2">
+                <div className="flex gap-3">
                   <button 
                     onClick={() => scroll('right')}
-                    className="w-7 h-7 rounded-full bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-400/30 flex items-center justify-center text-slate-300 hover:text-cyan-300 transition-all cursor-pointer"
+                    className="w-10 h-10 rounded-full bg-slate-900/80 hover:bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-400 flex items-center justify-center text-cyan-400 hover:text-white transition-all shadow-[0_0_15px_rgba(0,210,255,0.05)] hover:shadow-[0_0_20px_rgba(0,210,255,0.2)] hover:scale-105 active:scale-95 cursor-pointer"
                     aria-label="הקודם"
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
                   <button 
                     onClick={() => scroll('left')}
-                    className="w-7 h-7 rounded-full bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-400/30 flex items-center justify-center text-slate-300 hover:text-cyan-300 transition-all cursor-pointer"
+                    className="w-10 h-10 rounded-full bg-slate-900/80 hover:bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-400 flex items-center justify-center text-cyan-400 hover:text-white transition-all shadow-[0_0_15px_rgba(0,210,255,0.05)] hover:shadow-[0_0_20px_rgba(0,210,255,0.2)] hover:scale-105 active:scale-95 cursor-pointer"
                     aria-label="הבא"
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
@@ -227,15 +227,15 @@ export default function Hero() {
                 {speakers.map((speaker, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-[180px] sm:w-[200px] snap-start bg-white/[0.02] border border-white/5 hover:border-cyan-500/20 hover:bg-[#112240]/40 p-3 rounded-xl backdrop-blur-sm transition-all duration-300 group/sp"
+                    className="flex-shrink-0 w-[180px] sm:w-[200px] snap-start bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-cyan-400 hover:bg-cyan-500/[0.05] p-4 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_10px_25px_rgba(0,210,255,0.15)] group/sp"
                   >
                     {/* Avatar */}
-                    <div className="w-12 h-12 mx-auto mb-2.5 rounded-full overflow-hidden border border-cyan-500/20 group-hover/sp:border-cyan-400 group-hover/sp:scale-105 transition-all duration-300 shadow-md bg-slate-900 flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3.5 rounded-full overflow-hidden border border-cyan-500/20 group-hover/sp:border-cyan-400 group-hover/sp:scale-105 transition-all duration-500 shadow-md bg-slate-900 flex items-center justify-center">
                       {speaker.image ? (
                         <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-cyan-950/40 text-cyan-400">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                           </svg>
                         </div>
@@ -244,10 +244,10 @@ export default function Hero() {
                     
                     {/* Name & Title */}
                     <div className="text-center">
-                      <h5 className="font-bold text-white text-xs sm:text-sm mb-0.5 group-hover/sp:text-cyan-300 transition-colors duration-300">
+                      <h5 className="font-bold text-white text-xs sm:text-sm mb-1 group-hover/sp:text-cyan-300 transition-colors duration-300">
                         {speaker.name}
                       </h5>
-                      <p className="text-[10px] text-slate-400 leading-normal line-clamp-2">
+                      <p className="text-[10px] text-slate-400 leading-normal line-clamp-2 group-hover/sp:text-slate-300 transition-colors duration-300">
                         {speaker.title}
                       </p>
                     </div>
