@@ -85,7 +85,7 @@ const scheduleData = [
     time: "11:15 - 11:35",
     title: "Diabetes and Obesity Management: A Practical Perspective",
     type: "lecture",
-    speaker: "Prof. Avivit Cohen | Head of Internal Medicine Dept. A, Hadassah Medical Center, Chair of the National Council for Diabetes & Obesity",
+    speaker: "פרופ' אביבית כהן | מנהלת מחלקה פנימית א', מרכז רפואי הדסה, יו\"ר המועצה הלאומית לסוכרת והשמנה",
     sponsor: "lilly",
     desc: "An evidence-based overview of dual GIP/GLP-1 receptor co-agonists, comparative clinical trial results, safety profiles, and recommendations for integration into clinical practice for complex patient cohorts."
   },

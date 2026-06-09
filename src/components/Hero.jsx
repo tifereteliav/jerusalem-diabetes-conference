@@ -35,8 +35,8 @@ export default function Hero() {
       image: '/ליה תמיר.jpeg'
     },
     {
-      name: 'Prof. Avivit Cohen',
-      title: 'Head of Internal Medicine Dept. A, Hadassah Medical Center, Chair of the National Council for Diabetes & Obesity',
+      name: "פרופ' אביבית כהן",
+      title: "מנהלת מחלקה פנימית א', מרכז רפואי הדסה, יו\"ר המועצה הלאומית לסוכרת והשמנה",
       image: ''
     },
     {
