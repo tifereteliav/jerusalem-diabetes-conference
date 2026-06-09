@@ -52,7 +52,7 @@ export default function Hero() {
     {
       name: 'נועה איצקוביץ\'',
       title: 'KAM GSK',
-      image: ''
+      image: "/נועה איצקוביץ'.jpeg"
     },
     {
       name: 'תניה ריינפלד',
