@@ -74,7 +74,7 @@ export default function Hero() {
     }
   };
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="relative overflow-hidden pt-24 pb-16 md:pt-40 md:pb-28">
       {/* Background Gradients & Glows */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[600px] h-[350px] md:h-[600px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none bg-glow-cyan" />
       <div className="absolute bottom-10 right-1/4 translate-x-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none bg-glow-gold" />
@@ -164,8 +164,8 @@ export default function Hero() {
             {/* Co-Chairs Section */}
             <div className="mt-20 pt-10 border-t border-white/5">
               <span className="text-xs uppercase tracking-wider text-[#D4AF37] font-bold block mb-4">יושבות ראש הכנס:</span>
-              <div className="flex flex-wrap gap-6 justify-start">
-                <div className="flex items-center gap-3 glass-card-cyan px-4 py-3.5 rounded-2xl">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-start">
+                <div className="w-full sm:w-auto flex items-center gap-3 glass-card-cyan px-4 py-3 sm:py-3.5 rounded-2xl">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-teal-500 flex items-center justify-center text-[#0A192F] font-bold text-sm shadow shrink-0">
                     תה
                   </div>
@@ -176,7 +176,7 @@ export default function Hero() {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 glass-card-gold px-4 py-3.5 rounded-2xl">
+                <div className="w-full sm:w-auto flex items-center gap-3 glass-card-gold px-4 py-3 sm:py-3.5 rounded-2xl">
                   <div className="w-10 h-10 rounded-full overflow-hidden border border-[#D4AF37]/50 shadow shrink-0 bg-slate-900">
                     <img src="/tiferet.jpg" alt="תפארת אליאב" className="w-full h-full object-cover" />
                   </div>
@@ -192,11 +192,11 @@ export default function Hero() {
 
             {/* Speakers Section */}
             <div className="border-t border-white/10 pt-6 mt-6">
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs uppercase tracking-wider text-cyan-300 font-bold block">מרצי הכנס:</span>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+                <span className="text-xs uppercase tracking-wider text-cyan-300 font-bold block text-center sm:text-right w-full sm:w-auto">מרצי הכנס:</span>
                 
                 {/* Scroll Buttons */}
-                <div className="flex gap-3">
+                <div className="flex justify-center gap-4 w-full sm:w-auto">
                   <button 
                     onClick={() => scroll('right')}
                     className="w-10 h-10 rounded-full bg-slate-900/80 hover:bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-400 flex items-center justify-center text-cyan-400 hover:text-white transition-all shadow-[0_0_15px_rgba(0,210,255,0.05)] hover:shadow-[0_0_20px_rgba(0,210,255,0.2)] hover:scale-105 active:scale-95 cursor-pointer"
@@ -221,21 +221,21 @@ export default function Hero() {
               {/* Scroll Container */}
               <div 
                 ref={scrollRef}
-                className="flex gap-4 overflow-x-auto pb-2 pt-1 scrollbar-none snap-x snap-mandatory text-right scroll-smooth" 
+                className="flex gap-4 overflow-x-auto pb-4 pt-1.5 scrollbar-none snap-x snap-mandatory text-right scroll-smooth px-1" 
                 style={{ direction: 'rtl' }}
               >
                 {speakers.map((speaker, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-[210px] sm:w-[240px] snap-start glass-card-cyan p-5 rounded-2xl group/sp"
+                    className="flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px] snap-start glass-card-cyan p-4 sm:p-5 rounded-2xl group/sp"
                   >
                     {/* Avatar */}
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border border-cyan-500/20 group-hover/sp:border-cyan-400 group-hover/sp:scale-105 transition-all duration-500 shadow-md bg-slate-900 flex items-center justify-center">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full overflow-hidden border border-cyan-500/20 group-hover/sp:border-cyan-400 group-hover/sp:scale-105 transition-all duration-500 shadow-md bg-slate-900 flex items-center justify-center">
                       {speaker.image ? (
                         <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-cyan-950/40 text-cyan-400">
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                           </svg>
                         </div>
@@ -243,11 +243,11 @@ export default function Hero() {
                     </div>
                     
                     {/* Name & Title */}
-                    <div className="text-center flex flex-col justify-start h-[100px]">
-                      <h5 className="font-extrabold text-white text-sm sm:text-base mb-1.5 group-hover/sp:text-cyan-300 transition-colors duration-300">
+                    <div className="text-center flex flex-col justify-start h-[90px] sm:h-[100px]">
+                      <h5 className="font-extrabold text-white text-xs sm:text-sm md:text-base mb-1.5 group-hover/sp:text-cyan-300 transition-colors duration-300">
                         {speaker.name}
                       </h5>
-                      <p className="text-[11px] text-slate-350 leading-relaxed line-clamp-4 group-hover/sp:text-slate-250 transition-colors duration-300">
+                      <p className="text-[10px] sm:text-[11px] text-slate-300 leading-relaxed line-clamp-4 group-hover/sp:text-slate-200 transition-colors duration-300">
                         {speaker.title}
                       </p>
                     </div>

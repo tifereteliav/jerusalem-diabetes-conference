@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showVideoModal, setShowVideoModal] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0A192F] text-slate-100 flex flex-col font-['Heebo','Rubik',sans-serif] selection:bg-cyan-500 selection:text-[#0A192F]">
+    <div className="min-h-screen bg-[#030712] text-slate-100 flex flex-col font-['Heebo','Rubik',sans-serif] selection:bg-cyan-500 selection:text-[#0A192F]">
       
       {/* Scroll Progress Bar */}
       <div 
@@ -29,7 +30,7 @@ function App() {
       />
 
       {/* Header Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#030712]/85 backdrop-blur-lg border-b border-white/5 h-24 flex items-center">
+      <header className="fixed top-0 left-0 right-0 z-40 bg-[#030712]/90 backdrop-blur-lg border-b border-white/5 h-20 md:h-24 flex items-center">
         <div className="container mx-auto px-6 flex items-center justify-between w-full">
           
           {/* Logo / Title */}
@@ -41,8 +42,8 @@ function App() {
             </div>
           </div>
 
-          {/* Navigation Links (Hebrew RTL) */}
-          <nav className="flex items-center gap-6 md:gap-10">
+          {/* Navigation Links (Desktop - hidden on mobile) */}
+          <nav className="hidden md:flex items-center gap-6 md:gap-10">
             <a 
               href="#about" 
               className="text-sm font-semibold text-slate-300 hover:text-white hover:text-glow-cyan transition-colors duration-300"
@@ -84,8 +85,79 @@ function App() {
             </a>
           </nav>
 
+          {/* Mobile elements (Register CTA + Hamburger Toggle) */}
+          <div className="flex md:hidden items-center gap-3">
+            <a 
+              href="https://reg.eventact.com/form?Event=iy5YAAA&c=i9wg&Form=iFJ4AAA&=&Account=iAA&hc=&login=455291486150" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-xl text-xs font-bold bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37]/20 hover:text-white transition-all"
+            >
+              הרשמה
+            </a>
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-slate-300 hover:text-white p-2 rounded-xl hover:bg-white/5 cursor-pointer focus:outline-none transition-colors"
+              aria-label="תפריט ניווט"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+
         </div>
       </header>
+
+      {/* Mobile Navigation Drawer overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-30 bg-[#030712]/98 backdrop-blur-lg md:hidden flex flex-col pt-28 px-6 transition-all duration-300">
+          <nav className="flex flex-col gap-5 text-right mt-6">
+            <a 
+              href="#about" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-lg font-bold text-slate-200 hover:text-cyan-400 py-3.5 border-b border-white/5 transition-colors"
+            >
+              אודות הכנס
+            </a>
+            <a 
+              href="#program" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-lg font-bold text-slate-200 hover:text-cyan-400 py-3.5 border-b border-white/5 transition-colors"
+            >
+              תוכנית הכנס
+            </a>
+            
+            {/* Previous Conferences inside Drawer */}
+            <div className="py-3.5 border-b border-white/5">
+              <span className="text-sm font-bold text-slate-400 block mb-2">כנסים קודמים</span>
+              <button 
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setShowVideoModal(true);
+                }}
+                className="text-lg font-bold text-[#D4AF37] hover:text-white transition-colors cursor-pointer w-full text-right"
+              >
+                סרטון סיכום כנס 2025
+              </button>
+            </div>
+
+            <a 
+              href="https://reg.eventact.com/form?Event=iy5YAAA&c=i9wg&Form=iFJ4AAA&=&Account=iAA&hc=&login=455291486150" 
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-8 w-full py-4 text-center rounded-xl text-base font-bold bg-gradient-to-r from-cyan-500 to-teal-500 text-[#0A192F] shadow-lg shadow-cyan-500/20"
+            >
+              להרשמה לכנס
+            </a>
+          </nav>
+        </div>
+      )}
 
       {/* Main Sections */}
       <main className="flex-grow">
