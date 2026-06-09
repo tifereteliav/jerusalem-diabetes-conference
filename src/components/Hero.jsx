@@ -62,7 +62,7 @@ export default function Hero() {
     {
       name: 'דניאלה סולו',
       title: 'מנהלת מכירות, מינימד',
-      image: ''
+      image: '/דניאלה.jpeg'
     }
   ];
 
