@@ -27,7 +27,7 @@ export default function Hero() {
     {
       name: 'מיטל לויטן אליהו',
       title: 'אחות ראשית תא לחץ, מרכז רפואי הדסה',
-      image: ''
+      image: '/מיטל.jpeg'
     },
     {
       name: 'ליה תמיר',
