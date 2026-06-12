@@ -42,7 +42,7 @@ export default function Hero() {
     {
       name: 'ד"ר שושנה עמוס',
       title: 'רופאה בכירה, יחידת הסוכרת, מרכז רפואי הדסה עין כרם',
-      image: ''
+      image: '/שושי.jpeg'
     },
     {
       name: 'אסנת פינטו',
