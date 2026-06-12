@@ -57,7 +57,7 @@ export default function Hero() {
     {
       name: 'תניה ריינפלד',
       title: 'אחות מומחית בסוכרת, מרכז הצבי, קופ"ח מאוחדת',
-      image: ''
+      image: '/תניה.jpeg'
     },
     {
       name: 'דניאלה סולו',
